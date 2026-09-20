@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import NavBar from "../components/NavBar";
 
 const HomePage = () => {
   const [photosData, setPhotosData] = useState([]);
@@ -16,10 +17,15 @@ const HomePage = () => {
   }, []);
 
   return (
-    <div className="min-h-screen">
-      <div className="container mx-auto p-10">
+    <div className="min-h-screen flex">
+      <div className="w-1/4 bg-purple-200">
+        sidebar
+      </div>
+
+      <div className="container w-3/4 space-y-5 mx-auto p-4">
+        <NavBar />
         {/* header */}
-        <div className="flex justify-between">
+        <div className="bg-amber-700 flex justify-between">
           <div>
             <h2 className="text-2xl font-bold">Photo Gallery</h2>
             <p className="text-sm text-gray-600">
