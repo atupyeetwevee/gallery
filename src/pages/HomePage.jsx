@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import NavBar from "../components/NavBar";
 import { LuDownload } from "react-icons/lu";
+import SideBar from "../components/SideBar";
 
 const HomePage = () => {
   const [photosData, setPhotosData] = useState([]);
@@ -19,9 +20,7 @@ const HomePage = () => {
 
   return (
     <div className="min-h-screen flex">
-      <div className="w-1/4 bg-purple-200">
-        sidebar
-      </div>
+      <SideBar />
 
       <div className="container w-3/4 space-y-5 mx-auto p-4">
         <NavBar />
@@ -48,10 +47,10 @@ const HomePage = () => {
           <p>Port Congestion</p>
         </div>
         {/* photo grid  */}
-        <div className="grid grid-cols-3 gap-4 ">
+        <div className="grid grid-cols-3 gap-5 ">
           {photosData.map((item) => (
             <div key={item.id} 
-              className="border border-gray-200/40 rounded-lg shadow-lg px-4 py-4 space-x-2 space-y-2 "
+              className="border border-gray-800/10 rounded-lg shadow-xl px-4 py-4 space-x-2 space-y-2 text-sm "
             >
               <p><span className="font-medium">Name:</span> {item.name}</p>
               <p><span className="font-medium">Username:</span> {item.username}</p>
@@ -60,8 +59,8 @@ const HomePage = () => {
               <p><span className="font-medium">Suite:</span> {item.address.suite}</p>
               <p><span className="font-medium">City:</span> {item.address.city}</p>
               <p><span className="font-medium">Zipcode:</span> {item.address.zipcode}</p>
-              <p><span className="font-medium">Latitude:</span> {item.address.geo.lat}</p>
-              <p><span className="font-medium">Longtitude:</span> {item.address.geo.lng}</p>
+              {/* <p><span className="font-medium">Latitude:</span> {item.address.geo.lat}</p>
+              <p><span className="font-medium">Longtitude:</span> {item.address.geo.lng}</p> */}
             </div>
           ))}
         </div>
