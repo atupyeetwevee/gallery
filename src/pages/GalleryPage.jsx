@@ -19,12 +19,8 @@ const HomePage = () => {
   }, []);
 
   return (
-    <div className="min-h-screen flex">
-      <SideBar />
-
-      <div className="container w-3/4 space-y-5 mx-auto p-4">
-        <NavBar />
-        {/* header */}
+    <>
+      {/* header */}
         <div className="flex justify-between">
           <div>
             <h2 className="text-2xl font-bold">Photo Gallery</h2>
@@ -64,8 +60,7 @@ const HomePage = () => {
             </div>
           ))}
         </div>
-      </div>
-    </div>
+    </>
   );
 };
 
