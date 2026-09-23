@@ -1,44 +1,54 @@
 import { LuInfinity } from "react-icons/lu"
 import { MdQuestionMark } from "react-icons/md"
+import { NavLink } from "react-router-dom";
 
 function SideBar() {
 
     const menu = [
         {
             title: "Maps",
-            icon: LuInfinity
+            icon: LuInfinity,
+            path: "/maps"
         },
         {
             title: "Vessels",
-            icon: LuInfinity
+            icon: LuInfinity,
+            path: "/vessels"
         },
         {
             title: "Ports",
-            icon: LuInfinity
+            icon: LuInfinity,
+            path: "/ports"
         },
         {
             title: "Lighthouse",
-            icon: LuInfinity
+            icon: LuInfinity,
+            path: "/lighthouse"
         },
         {
             title: "Companies",
-            icon: LuInfinity
+            icon: LuInfinity,
+            path: "/companies"
         },
         {
             title: "Station",
-            icon: LuInfinity
+            icon: LuInfinity,
+            path: "/station"
         },
         {
             title: "Marinetime News",
-            icon: LuInfinity
+            icon: LuInfinity,
+            path: "/marinetime"
         },
         {
             title: "Photo gallery",
-            icon: LuInfinity
+            icon: LuInfinity,
+            path: "/"
         },
         {
             title: "Plans & pricing",
-            icon: LuInfinity
+            icon: LuInfinity,
+            path: "/plans&pricing"
         }
     ]
   return (
@@ -54,10 +64,12 @@ function SideBar() {
             {menu.map((item) => {
                 const Icon = item.icon;
                     return(
-                        <div className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-gray-400 hover:bg-gray-100 hover:text-gray-600 cursor-pointer">
+                        <NavLink 
+                            to={item.path}
+                            className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-gray-400 hover:bg-gray-100 hover:text-gray-600 cursor-pointer">
                             <Icon size={20} />
                             <p>{item.title}</p>
-                        </div>
+                        </NavLink>
                     )  
                 }
             )}
