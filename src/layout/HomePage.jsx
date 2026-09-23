@@ -8,8 +8,8 @@ function HomePage() {
         <SideBar />
 
         <div className="container w-3/4 space-y-5 mx-auto p-4">
-            <NavBar />
-            <Outlet />
+          <NavBar />
+          <Outlet />
         </div>
     </div>
   )

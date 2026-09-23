@@ -1,9 +1,8 @@
 import { useEffect, useState } from "react";
-import NavBar from "../components/NavBar";
 import { LuDownload } from "react-icons/lu";
-import SideBar from "../components/SideBar";
 
-const HomePage = () => {
+
+const GalleryPage = () => {
   const [photosData, setPhotosData] = useState([]);
 
   useEffect(() => {
@@ -64,4 +63,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default GalleryPage;
