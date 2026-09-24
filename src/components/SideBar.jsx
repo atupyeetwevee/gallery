@@ -65,10 +65,16 @@ function SideBar() {
                 const Icon = item.icon;
                     return(
                         <NavLink 
+                            key={item.title}
                             to={item.path}
-                            className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-gray-400 hover:bg-gray-100 hover:text-gray-600 cursor-pointer">
-                            <Icon size={20} />
-                            <p>{item.title}</p>
+                            className = {({isActive}) =>
+                                `flex items-center gap-3 px-3 py-2.5 rounded-lg cursor-pointer
+                            ${ isActive ? "bg-blue-100 text-blue-600" : "text-gray-400 hover:bg-gray-100 hover:text-gray-600"
+                            }`
+                            }
+                        >
+                                <Icon size={20} />
+                                <p>{item.title}</p>
                         </NavLink>
                     )  
                 }
