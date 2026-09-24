@@ -20,39 +20,39 @@ function SideBar() {
             icon: LuInfinity,
             path: "/ports"
         },
-        {
-            title: "Lighthouse",
-            icon: LuInfinity,
-            path: "/lighthouse"
-        },
-        {
-            title: "Companies",
-            icon: LuInfinity,
-            path: "/companies"
-        },
-        {
-            title: "Station",
-            icon: LuInfinity,
-            path: "/station"
-        },
-        {
-            title: "Marinetime News",
-            icon: LuInfinity,
-            path: "/marinetime"
-        },
+        // {
+        //     title: "Lighthouse",
+        //     icon: LuInfinity,
+        //     path: "/lighthouse"
+        // },
+        // {
+        //     title: "Companies",
+        //     icon: LuInfinity,
+        //     path: "/companies"
+        // },
+        // {
+        //     title: "Station",
+        //     icon: LuInfinity,
+        //     path: "/station"
+        // },
+        // {
+        //     title: "Marinetime News",
+        //     icon: LuInfinity,
+        //     path: "/marinetime"
+        // },
         {
             title: "Photo gallery",
             icon: LuInfinity,
             path: "/"
         },
-        {
-            title: "Plans & pricing",
-            icon: LuInfinity,
-            path: "/plans&pricing"
-        }
+        // {
+        //     title: "Plans & pricing",
+        //     icon: LuInfinity,
+        //     path: "/plans&pricing"
+        // }
     ]
   return (
-    <div className="w-1/4 min-h-screen flex flex-col gap-15 px-4 bg-purple-100">
+    <div className="w-1/4 h-screen fixed left-0 top-0  flex flex-col gap-15 px-4 bg-purple-100">
         <div className="flex gap-2 pt-4">
             <div className="w-8 h-8 rounded-full bg-blue-600 text-white flex justify-center items-center">
                 <LuInfinity />

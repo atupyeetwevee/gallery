@@ -7,7 +7,7 @@ function HomePage() {
     <div className="min-h-screen flex">
         <SideBar />
 
-        <div className="container w-3/4 space-y-5 mx-auto p-4">
+        <div className="container ml-[25%] min-h-screen w-3/4 space-y-5 mx-auto p-4">
           <NavBar />
           <Outlet />
         </div>
