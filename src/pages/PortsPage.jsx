@@ -17,10 +17,10 @@ function PortsPage() {
     },[]);
 
     return (
-    <div>
+    <div className="grid grid-cols-4 gap-4">
       {showPorts.map((item) => (
         <div key={item.id}
-          className="border border-amber-200/60 px-4 py-4"
+          className="border border-amber-100/40 shadow shadow-amber-600/30 rounded-lg px-4 py-4"
         >
           {item.body}
         </div>
