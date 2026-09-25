@@ -14,10 +14,17 @@ function PortsPage() {
       .catch((error) => {
           console.error("Failed to fetch photos:", error);
         });
-    })
+    },[]);
+
     return (
     <div>
-
+      {showPorts.map((item) => (
+        <div key={item.id}
+          className="border border-amber-200/60 px-4 py-4"
+        >
+          {item.body}
+        </div>
+      ))}
     </div>
   )
 }
