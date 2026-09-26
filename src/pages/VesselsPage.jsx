@@ -15,8 +15,14 @@ function VesselsPage() {
         });
     },[]);
   return (
-    <div>
-      {showVessels.map((item) => ())}
+    <div className="grid grid-cols-2 gap-5 p-4">
+      {showVessels.map((item) => (
+        <div key={item.id}
+          className="border border-pink-300 shadow-lg shadow-pink-300 rounded-md py-4 px-2"
+        >
+          {item.name}
+        </div>
+      ))}
     </div>
   )
 }
