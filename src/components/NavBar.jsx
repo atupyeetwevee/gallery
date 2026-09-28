@@ -1,19 +1,22 @@
+import { useState } from "react"
 import { BsChatText } from "react-icons/bs"
 import { IoIosNotificationsOutline } from "react-icons/io"
 import { LuChevronDown, LuSearch } from "react-icons/lu"
 
 
 function NavBar() {
+    const { search, setSearch } = useSearch();
 
   return (
     <div className="flex justify-between items-center px-4">
         <div className="w-1/3">
-            <input 
+            <input
                 type="text"
                 placeholder="Search..."
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
-                className="border border-gray-400/50 rounded-lg py-2 px-2"/><LuSearch />
+                className="border rounded-lg px-4 py-2"
+                /><LuSearch />
         </div>
 
         <div className="flex items-center gap-5">
