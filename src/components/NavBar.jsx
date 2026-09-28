@@ -1,4 +1,5 @@
-import { useState } from "react"
+import { useContext } from "react";
+import { SearchContext } from "./SearchContext";
 import { BsChatText } from "react-icons/bs"
 import { IoIosNotificationsOutline } from "react-icons/io"
 import { LuChevronDown, LuSearch } from "react-icons/lu"
@@ -6,13 +7,14 @@ import { useLocation } from "react-router-dom"
 
 function NavBar() {
     const location = useLocation();
+    const { search, setSearch } = useContext(SearchContext);
 
   return (
     <div className="flex justify-between items-center px-4">
         <div className="w-1/3">
-            <div 
-                onClick={() => setSearch(())}
-                className="border border-gray-400/50 rounded-lg py-2 px-2"><LuSearch /></div>
+            <input value={search}
+                onChange={(e) => setSearch(e.target.value)}
+                className="border border-gray-400/50 rounded-lg py-2 px-2" /><LuSearch />
         </div>
 
         <div className="flex items-center gap-5">

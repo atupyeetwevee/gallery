@@ -14,6 +14,11 @@ function VesselsPage() {
           console.error("Failed to fetch photos:", error);
         });
     },[]);
+
+    const filteredVessels = showVessels.filter((vessel) =>
+    vessel.name.toLowerCase().includes(search.toLowerCase())
+  );
+
   return (
     <div className="grid grid-cols-2 gap-5 p-4">
       {showVessels.map((item) => (
