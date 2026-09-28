@@ -22,6 +22,18 @@ function VesselsPage() {
 
   return (
     <div className="grid grid-cols-2 gap-5 p-4">
+      <div>
+      {filteredVessels.length > 0 ? (
+        filteredVessels.map((vessel) => (
+          <div key={vessel.id}>
+            <h2>{vessel.name}</h2>
+          </div>
+        ))
+      ) : (
+        <p>No item found</p>
+      )}
+      </div>
+
       {showVessels.map((item) => (
         <div key={item.id}
           className="border border-pink-300 shadow-lg shadow-pink-300 rounded-md py-4 px-2"

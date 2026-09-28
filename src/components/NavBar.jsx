@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useSearch } from "react"
 import { BsChatText } from "react-icons/bs"
 import { IoIosNotificationsOutline } from "react-icons/io"
 import { LuChevronDown, LuSearch } from "react-icons/lu"
