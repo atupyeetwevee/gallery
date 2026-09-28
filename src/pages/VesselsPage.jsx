@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 
 function VesselsPage() {
   const [showVessels, setShowVessels] = useState([]);
+  const [search, setSearch] = useState("");
 
     useEffect(() =>{
       fetch("https://jsonplaceholder.typicode.com/comments?_limit=9")

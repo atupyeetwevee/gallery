@@ -8,8 +8,12 @@ function NavBar() {
   return (
     <div className="flex justify-between items-center px-4">
         <div className="w-1/3">
-            <div 
-                className="border border-gray-400/50 rounded-lg py-2 px-2"><LuSearch /></div>
+            <input 
+                type="text"
+                placeholder="Search..."
+                value={search}
+                onChange={(e) => setSearch(e.target.value)}
+                className="border border-gray-400/50 rounded-lg py-2 px-2"/><LuSearch />
         </div>
 
         <div className="flex items-center gap-5">
