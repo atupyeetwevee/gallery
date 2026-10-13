@@ -4,12 +4,10 @@ import MapsPage from "./pages/MapsPage";
 import PortsPage from "./pages/PortsPage";
 import VesselsPage from "./pages/VesselsPage";
 import GalleryPage from "./pages/GalleryPage";
-import SearchProvider from "./components/SearchProvider";
 
 function App() {
   return (
     <>
-      <SearchProvider >
         <BrowserRouter>
           <Routes>
             <Route element = {<HomePage />}>
@@ -20,7 +18,6 @@ function App() {
             </Route>
           </Routes>
         </BrowserRouter>
-      </SearchProvider>
     </>
   );
 }
